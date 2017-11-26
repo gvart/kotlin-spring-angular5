@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {GreetService} from "../shared/greet.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -10,9 +12,12 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [
+      GreetService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
